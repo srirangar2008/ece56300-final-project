@@ -10,6 +10,9 @@
 #include <dirent.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <queue>
+
+#define MAX_REDUCERS 16
 
 #define BUCKET_SIZE 500 //500 buckets for storing the hashMap.
 
@@ -22,9 +25,10 @@ struct hashMapEntry
 };
 
 vector<string> filenames;
-vector<struct hashMapEntry> reducerQueue[4];
+queue<struct hashMapEntry> reducerQueue[MAX_REDUCERS];
 int maxThreads;
-int startReducer[4];
+int startReducer[MAX_REDUCERS];
+int mapperDone[MAX_REDUCERS];
 
 int hashFunction(string word)
 {
@@ -82,12 +86,13 @@ void readFile(string filename)
 			//Putting to the corresponding reducer
 			int reducer_id = hashVal % maxThreads;
 			//cout << "reducer_id = " << reducer_id << ", hashVal = " << to_string(hashVal) << endl;
-			reducerQueue[reducer_id].push_back(hme);
-			startReducer[omp_get_thread_num()] = 1;
+			reducerQueue[reducer_id].push(hme);
+			//startReducer[omp_get_thread_num()] = 1;
 		}
 		//cout << "Word = " << itr->first << ", Count = " << itr->second << endl;
 	}
 	cout << omp_get_thread_num() << ": Hashmap size = " << hashMap.size() << endl;
+	mapperDone[omp_get_thread_num()] = 1;
 	//int testHashVal = hashFunction("you");
 	//cout << "testHashVal = " << testHashVal << endl;
 	//for(int i = 0; i < hashMap[testHashVal].size(); i++)
@@ -134,16 +139,19 @@ int reducer(int tid)
 {
 	std::map<string, int> wordCount;
 	//check for null in vector
-	cout << "Reducer Thread : " << tid << endl;
-	while(startReducer[omp_get_thread_num()] == 0);
+	#pragma omp critical
+	cout << "Reducer Thread : " << omp_get_thread_num() << endl;
 	
-	while(reducerQueue[omp_get_thread_num()].size() != 0)
+	while(reducerQueue[omp_get_thread_num()].empty() == 1);
+	
+	while((reducerQueue[omp_get_thread_num()].size() != 0) || (mapperDone[omp_get_thread_num()] == 0))
 	{
+		while(reducerQueue[omp_get_thread_num()].empty() == 1);
 		struct hashMapEntry hme;
 		#pragma omp critical
 		{
-			hme = reducerQueue[omp_get_thread_num()].at(0);
-			reducerQueue[omp_get_thread_num()].erase(reducerQueue[omp_get_thread_num()].begin());
+			hme = reducerQueue[omp_get_thread_num()].front();
+			reducerQueue[omp_get_thread_num()].pop();
 			wordCount[hme.word] += hme.count;
 		}
 		//cout << "redQ[0] size = " << reducerQueue[omp_get_thread_num()].size() << endl;
@@ -178,6 +186,8 @@ int main(int argc, char* argv[])
 	
 	double start, end;
 	start = -omp_get_wtime();
+	
+	
 	/*#pragma omp master
 	{
 		cout << "In the master thread. STarting the tasks now" << endl;
@@ -192,37 +202,40 @@ int main(int argc, char* argv[])
 	}*/
 	//Start reading and the mappers
 	//STart the reducer in parallel
-	#pragma omp parallel
+	int numFiles = getNumFiles("files/");
+	#pragma omp parallel 
 	{
-		#pragma omp master 
+		#pragma omp master
 		{
-			int numFiles = getNumFiles("files/");
 			#pragma omp task
 			{
-				//cout << "starting paralelely" << endl;
-				//sleep(5);
+					//cout << "starting paralelely" << endl;
+					//sleep(5);
 				#pragma omp parallel for num_threads(numThreads)
 				//#pragma omp master
 				for(int i = 0; i < numFiles; i++)
 				{
+					#pragma omp critical
 					cout << "tid = " << omp_get_thread_num() << " , file = " << filenames.at(i) << endl;
 					readFile("files/"+ filenames.at(i));
 				}
-				//readFile("files/15.txt");
+					//readFile("files/15.txt");
 			}
 			
-			#pragma omp task
-			{
-				//cout << "starting task2 parallely" << endl;
-				#pragma omp parallel for num_threads(numThreads)
-				for(int i = 0; i < numThreads; i++)
-				{
-					reducer(omp_get_thread_num());
-				}
-			}
 			
 		}
+		#pragma omp task
+			{
+				//cout << "starting task2 parallely" << endl;
+				//#pragma omp parallel for num_threads(numThreads)
+				//for(int i = 0; i < numThreads; i++)
+				reducer(omp_get_thread_num());
+		
+			}
 	}
+		
+	
+	
 	end = omp_get_wtime();
 	cout << "Time elapsed = " << end + start << endl;;
 	//readFile("files/1.txt");
