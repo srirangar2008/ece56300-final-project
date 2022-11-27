@@ -1,0 +1,415 @@
+Hello
+Hello
+5.txt
+2.txt
+12.txt
+15.txt
+3.txt
+5.txt
+2.txt
+12.txt
+15.txt
+3.txt
+4.txt
+14.txt
+13.txt
+7.txt
+9.txt
+16.txt
+11.txt
+8.txt
+1.txt
+6.txt
+4.txt
+14.txt
+13.txt
+7.txt
+9.txt
+16.txt
+11.txt
+8.txt
+1.txt
+6.txt
+Pid : 1, numMappers = 1, numReducers = 1
+Pid = 1
+Pid : 1This is a mapper Thread
+Pid : 0, numMappers = 1, numReducers = 1
+Master Thread
+Pid : 0This is a reducer Thread
+5.txt
+2.txt
+12.txt
+15.txt
+3.txt
+4.txt
+14.txt
+13.txt
+7.txt
+9.txt
+16.txt
+11.txt
+8.txt
+1.txt
+6.txt
+tid = 0 , file = 5.txt
+Thread = 0 is reading file files/5.txt
+tid = 1 , file = 5.txt
+Thread = 1 is reading file files/5.txt
+tid = 0 , file = 5.txt
+Thread = 0 is reading file files/5.txt
+tid = 1 , file = 5.txt
+Thread = 1 is reading file files/5.txt
+0: wordcoutn size = 20451
+0: wordcoutn size = 20451
+1: wordcoutn size = 20451
+1: wordcoutn size = 20451
+0: Hashmap size = 500
+Thread 0 finished reading file : files/5.txt
+reducerQueue[0] = 40379
+tid = 0 , file = 2.txt
+Thread = 0 is reading file files/2.txt
+0: wordcoutn size = 3167
+1: Hashmap size = 500
+Thread 1 finished reading file : files/5.txt
+reducerQueue[1] = 42594
+tid = 1 , file = 2.txt
+Thread = 1 is reading file files/2.txt
+1: Hashmap size = 500
+Thread 1 finished reading file : files/5.txt
+reducerQueue[1] = 42674
+tid = 1 , file = 2.txt
+Thread = 1 is reading file files/2.txt
+0: Hashmap size = 500
+Thread 0 finished reading file : files/5.txt
+reducerQueue[0] = 42003
+1: wordcoutn size = 3167
+tid = 0 , file = 2.txt
+Thread = 0 is reading file files/2.txt
+1: wordcoutn size = 3167
+0: wordcoutn size = 3167
+0: Hashmap size = 488
+Thread 0 finished reading file : files/2.txt
+reducerQueue[0] = 43987
+tid = 0 , file = 12.txt
+Thread = 0 is reading file files/12.txt
+0: wordcoutn size = 6862
+1: Hashmap size = 488
+Thread 1 finished reading file : files/2.txt
+reducerQueue[1] = 48683
+tid = 1 , file = 12.txt
+Thread = 1 is reading file files/12.txt
+1: Hashmap size = 488
+Thread 1 finished reading file : files/2.txt
+reducerQueue[1] = 48895
+tid = 1 , file = 12.txt
+Thread = 1 is reading file files/12.txt
+0: Hashmap size = 488
+Thread 0 finished reading file : files/2.txt
+reducerQueue[0] = 48123
+tid = 0 , file = 12.txt
+Thread = 0 is reading file files/12.txt
+1: wordcoutn size = 6862
+1: wordcoutn size = 6862
+0: wordcoutn size = 6862
+0: Hashmap size = 500
+Thread 0 finished reading file : files/12.txt
+reducerQueue[0] = 59546
+tid = 0 , file = 15.txt
+Thread = 0 is reading file files/15.txt
+0: wordcoutn size = 10065
+1: Hashmap size = 500
+Thread 1 finished reading file : files/12.txt
+reducerQueue[1] = 62334
+tid = 1 , file = 15.txt
+Thread = 1 is reading file files/15.txt
+1: Hashmap size = 500
+Thread 1 finished reading file : files/12.txt
+reducerQueue[1] = 62402
+tid = 1 , file = 15.txt
+Thread = 1 is reading file files/15.txt
+0: Hashmap size = 500
+Thread 0 finished reading file : files/12.txt
+reducerQueue[0] = 61371
+tid = 0 , file = 15.txt
+Thread = 0 is reading file files/15.txt
+1: wordcoutn size = 10065
+1: wordcoutn size = 10065
+0: wordcoutn size = 10065
+0: Hashmap size = 500
+Thread 0 finished reading file : files/15.txt
+reducerQueue[0] = 79687
+tid = 0 , file = 3.txt
+Thread = 0 is reading file files/3.txt
+1: Hashmap size = 500
+Thread 1 finished reading file : files/15.txt
+reducerQueue[1] = 81903
+tid = 1 , file = 3.txt
+Thread = 1 is reading file files/3.txt
+1: Hashmap size = 500
+Thread 1 finished reading file : files/15.txt
+reducerQueue[1] = 81918
+tid = 1 , file = 3.txt
+Thread = 1 is reading file files/3.txt
+0: Hashmap size = 500
+Thread 0 finished reading file : files/15.txt
+reducerQueue[0] = 80220
+tid = 0 , file = 3.txt
+Thread = 0 is reading file files/3.txt
+0: wordcoutn size = 14704
+1: wordcoutn size = 14704
+1: wordcoutn size = 14704
+0: wordcoutn size = 14704
+0: Hashmap size = 500
+Thread 0 finished reading file : files/3.txt
+reducerQueue[0] = 109271
+tid = 0 , file = 4.txt
+Thread = 0 is reading file files/4.txt
+0: wordcoutn size = 10644
+1: Hashmap size = 500
+Thread 1 finished reading file : files/3.txt
+reducerQueue[1] = 112111
+tid = 1 , file = 4.txt
+Thread = 1 is reading file files/4.txt
+1: Hashmap size = 500
+Thread 1 finished reading file : files/3.txt
+reducerQueue[1] = 112293
+tid = 1 , file = 4.txt
+Thread = 1 is reading file files/4.txt
+0: Hashmap size = 500
+Thread 0 finished reading file : files/3.txt
+reducerQueue[0] = 111121
+tid = 0 , file = 4.txt
+Thread = 0 is reading file files/4.txt
+1: wordcoutn size = 10644
+1: wordcoutn size = 10644
+0: wordcoutn size = 10644
+0: Hashmap size = 500
+Thread 0 finished reading file : files/4.txt
+reducerQueue[0] = 129807
+tid = 0 , file = 14.txt
+Thread = 0 is reading file files/14.txt
+0: wordcoutn size = 9564
+1: Hashmap size = 500
+Thread 1 finished reading file : files/4.txt
+reducerQueue[1] = 134537
+tid = 1 , file = 14.txt
+Thread = 1 is reading file files/14.txt
+1: Hashmap size = 500
+Thread 1 finished reading file : files/4.txt
+reducerQueue[1] = 134628
+tid = 1 , file = 14.txt
+Thread = 1 is reading file files/14.txt
+0: Hashmap size = 500
+Thread 0 finished reading file : files/4.txt
+reducerQueue[0] = 132586
+tid = 0 , file = 14.txt
+Thread = 0 is reading file files/14.txt
+1: wordcoutn size = 9564
+1: wordcoutn size = 9564
+0: wordcoutn size = 9564
+0: Hashmap size = 500
+Thread 0 finished reading file : files/14.txt
+reducerQueue[0] = 148427
+tid = 0 , file = 13.txt
+Thread = 0 is reading file files/13.txt
+0: wordcoutn size = 3033
+0: Hashmap size = 494
+Thread 0 finished reading file : files/13.txt
+reducerQueue[0] = 150447
+tid = 0 , file = 7.txt
+Thread = 0 is reading file files/7.txt
+0: wordcoutn size = 2234
+0: Hashmap size = 470
+Thread 0 finished reading file : files/7.txt
+reducerQueue[0] = 151772
+tid = 0 , file = 9.txt
+Thread = 0 is reading file files/9.txt
+1: Hashmap size = 500
+Thread 1 finished reading file : files/14.txt
+reducerQueue[1] = 154869
+tid = 1 , file = 13.txt
+Thread = 1 is reading file files/13.txt
+1: wordcoutn size = 3033
+1: Hashmap size = 500
+Thread 1 finished reading file : files/14.txt
+reducerQueue[1] = 155424
+tid = 1 , file = 13.txt
+Thread = 1 is reading file files/13.txt
+1: wordcoutn size = 3033
+0: Hashmap size = 500
+Thread 0 finished reading file : files/14.txt
+reducerQueue[0] = 153964
+tid = 0 , file = 13.txt
+Thread = 0 is reading file files/13.txt
+0: wordcoutn size = 3033
+1: Hashmap size = 494
+Thread 1 finished reading file : files/13.txt
+reducerQueue[1] = 159109
+tid = 1 , file = 7.txt
+Thread = 1 is reading file files/7.txt
+1: wordcoutn size = 2234
+1: Hashmap size = 494
+Thread 1 finished reading file : files/13.txt
+reducerQueue[1] = 160107
+tid = 1 , file = 7.txt
+Thread = 1 is reading file files/7.txt
+1: wordcoutn size = 2234
+1: Hashmap size = 470
+Thread 1 finished reading file : files/7.txt
+reducerQueue[1] = 161646
+tid = 1 , file = 9.txt
+Thread = 1 is reading file files/9.txt
+0: Hashmap size = 494
+Thread 0 finished reading file : files/13.txt
+reducerQueue[0] = 158590
+tid = 0 , file = 7.txt
+Thread = 0 is reading file files/7.txt
+0: wordcoutn size = 2234
+1: Hashmap size = 470
+Thread 1 finished reading file : files/7.txt
+reducerQueue[1] = 162457
+tid = 1 , file = 9.txt
+Thread = 1 is reading file files/9.txt
+0: wordcoutn size = 18644
+0: Hashmap size = 470
+Thread 0 finished reading file : files/7.txt
+reducerQueue[0] = 160786
+tid = 0 , file = 9.txt
+Thread = 0 is reading file files/9.txt
+1: wordcoutn size = 18644
+1: wordcoutn size = 18644
+0: wordcoutn size = 18644
+0: Hashmap size = 500
+Thread 0 finished reading file : files/9.txt
+reducerQueue[0] = 196294
+tid = 0 , file = 16.txt
+Thread = 0 is reading file files/16.txt
+0: wordcoutn size = 5197
+1: Hashmap size = 500
+Thread 1 finished reading file : files/9.txt
+reducerQueue[1] = 202626
+tid = 1 , file = 16.txt
+Thread = 1 is reading file files/16.txt
+1: Hashmap size = 500
+Thread 1 finished reading file : files/9.txt
+reducerQueue[1] = 202650
+tid = 1 , file = 16.txt
+Thread = 1 is reading file files/16.txt
+1: wordcoutn size = 5197
+1: wordcoutn size = 5197
+0: Hashmap size = 500
+Thread 0 finished reading file : files/9.txt
+reducerQueue[0] = 201865
+tid = 0 , file = 16.txt
+Thread = 0 is reading file files/16.txt
+0: wordcoutn size = 5197
+0: Hashmap size = 496
+Thread 0 finished reading file : files/16.txt
+reducerQueue[0] = 202880
+tid = 0 , file = 11.txt
+Thread = 0 is reading file files/11.txt
+0: wordcoutn size = 9129
+1: Hashmap size = 496
+Thread 1 finished reading file : files/16.txt
+reducerQueue[1] = 212656
+tid = 1 , file = 11.txt
+Thread = 1 is reading file files/11.txt
+1: Hashmap size = 496
+Thread 1 finished reading file : files/16.txt
+reducerQueue[1] = 212677
+tid = 1 , file = 11.txt
+Thread = 1 is reading file files/11.txt
+0: Hashmap size = 496
+Thread 0 finished reading file : files/16.txt
+reducerQueue[0] = 209928
+tid = 0 , file = 11.txt
+Thread = 0 is reading file files/11.txt
+1: wordcoutn size = 9129
+1: wordcoutn size = 9129
+0: wordcoutn size = 9129
+0: Hashmap size = 500
+Thread 0 finished reading file : files/11.txt
+reducerQueue[0] = 223960
+tid = 0 , file = 8.txt
+Thread = 0 is reading file files/8.txt
+0: wordcoutn size = 3009
+0: Hashmap size = 485
+Thread 0 finished reading file : files/8.txt
+reducerQueue[0] = 226031
+tid = 0 , file = 1.txt
+Thread = 0 is reading file files/1.txt
+0: wordcoutn size = 5409
+1: Hashmap size = 500
+Thread 1 finished reading file : files/11.txt
+reducerQueue[1] = 232443
+tid = 1 , file = 8.txt
+Thread = 1 is reading file files/8.txt
+1: Hashmap size = 500
+Thread 1 finished reading file : files/11.txt
+reducerQueue[1] = 232466
+tid = 1 , file = 8.txt
+Thread = 1 is reading file files/8.txt
+1: wordcoutn size = 3009
+1: wordcoutn size = 3009
+0: Hashmap size = 500
+Thread 0 finished reading file : files/11.txt
+reducerQueue[0] = 231814
+tid = 0 , file = 8.txt
+Thread = 0 is reading file files/8.txt
+0: wordcoutn size = 3009
+1: Hashmap size = 485
+Thread 1 finished reading file : files/8.txt
+reducerQueue[1] = 236956
+tid = 1 , file = 1.txt
+Thread = 1 is reading file files/1.txt
+1: Hashmap size = 485
+Thread 1 finished reading file : files/8.txt
+reducerQueue[1] = 237025
+tid = 1 , file = 1.txt
+Thread = 1 is reading file files/1.txt
+1: wordcoutn size = 5409
+1: wordcoutn size = 5409
+0: Hashmap size = 485
+Thread 0 finished reading file : files/8.txt
+reducerQueue[0] = 236407
+tid = 0 , file = 1.txt
+Thread = 0 is reading file files/1.txt
+0: wordcoutn size = 5409
+0: Hashmap size = 500
+Thread 0 finished reading file : files/1.txt
+reducerQueue[0] = 237639
+tid = 0 , file = 6.txt
+Thread = 0 is reading file files/6.txt
+0: wordcoutn size = 12493
+1: Hashmap size = 500
+Thread 1 finished reading file : files/1.txt
+reducerQueue[1] = 247795
+1: Hashmap size = 500
+Thread 1 finished reading file : files/1.txt
+reducerQueue[1] = 247796
+tid = 1 , file = 6.txt
+Thread = 1 is reading file files/6.txt
+tid = 1 , file = 6.txt
+Thread = 1 is reading file files/6.txt
+0: Hashmap size = 500
+Thread 0 finished reading file : files/1.txt
+reducerQueue[0] = 244718
+tid = 0 , file = 6.txt
+Thread = 0 is reading file files/6.txt
+1: wordcoutn size = 12493
+1: wordcoutn size = 12493
+0: wordcoutn size = 12493
+0: Hashmap size = 500
+Thread 0 finished reading file : files/6.txt
+reducerQueue[0] = 266014
+1: Hashmap size = 500
+Thread 1 finished reading file : files/6.txt
+reducerQueue[1] = 270817
+1: Hashmap size = 500
+Thread 1 finished reading file : files/6.txt
+reducerQueue[1] = 270830
+starting parallely
+0: Hashmap size = 500
+Thread 0 finished reading file : files/6.txt
+reducerQueue[0] = 267540
+starting parallely

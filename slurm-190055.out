@@ -1,0 +1,24 @@
+Hello
+Pid : 1, numMappers = 1, numReducers = 1
+Hello
+Pid : 0, numMappers = 1, numReducers = 1
+Pid = 1
+Pid : 1This is a mapper Thread
+Master Thread
+Pid : 0This is a reducer Thread
+Started the reducer thread 0
+Pid = 1, FilePerMapper = 15, scaledMapperPid = 0starting parallely
+
+pid = 1, tid = 0 , file = 12.txt
+Thread = 0 is reading file files/12.txt
+pid = 1, tid = 1 , file = 15.txt
+Thread = 1 is reading file files/15.txt
+Waitign for receiev
+0: wordcoutn size = 6862
+1: wordcoutn size = 10065
+0: Hashmap size = 500
+Thread 0 finished reading file : files/12.txt
+1: Hashmap size = 500
+Thread 1 finished reading file : files/15.txt
+Time elapsed = 1.66957e+09
+srun: error: scholar-a002: task 0: Bus error

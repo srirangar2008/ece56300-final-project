@@ -1,0 +1,13 @@
+#!/bin/bash
+# FILENAME:  c.sub
+#SBATCH --nodes=1
+#SBATCH --ntasks=20
+#SBATCH --time=00:15:00
+
+#export OMP_NUM_THREADS=10
+
+srun --mpi=pmi2 -n 2 ./mapreduce_mpi 2
+#srun --mpi=pmi2 -n 2 ./mapreduce_mpi 2
+#srun --mpi=pmi2 -n 4 ./mapreduce_mpi 2
+#srun --mpi=pmi2 -n 8 ./mapreduce_mpi 2
+#srun --mpi=pmi2 -n 16 ./mapreduce_mpi 2

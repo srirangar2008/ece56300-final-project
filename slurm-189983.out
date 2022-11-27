@@ -1,0 +1,6 @@
+Pid : 0, numMappers = 1, numReducers = 1
+Pid : 1, numMappers = 1, numReducers = 1
+Pid = 1
+Pid : 1This is a mapper Thread
+Master Thread
+Pid : 0This is a reducer Thread

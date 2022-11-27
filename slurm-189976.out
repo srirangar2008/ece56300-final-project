@@ -1,0 +1,22 @@
+Master Thread
+Hello
+5.txt
+2.txt
+12.txt
+15.txt
+3.txt
+4.txt
+14.txt
+13.txt
+7.txt
+9.txt
+16.txt
+11.txt
+8.txt
+1.txt
+6.txt
+Reducer Thread : 1
+Reducer Thread : 0
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 189976.0 ON scholar-a001 CANCELLED AT 2022-11-27T09:20:15 ***
+slurmstepd: error: *** JOB 189976 ON scholar-a001 CANCELLED AT 2022-11-27T09:20:15 ***

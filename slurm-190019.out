@@ -1,0 +1,75 @@
+Hello
+Pid : 1, numMappers = 1, numReducers = 1
+Hello
+Pid : 0, numMappers = 1, numReducers = 1
+Master Thread
+Pid : 0This is a reducer Thread
+Started the reducer thread 0
+Pid = 1
+Pid : 1This is a mapper Thread
+Waitign for receiev
+Pid = 1, FilePerMapper = 15, scaledMapperPid = 0
+starting parallely
+pid = 1, tid = 0 , file = 5.txt
+Thread = 0 is reading file files/5.txt
+pid = 1, tid = 1 , file = 7.txtSedning now
+
+Thread = 1 is reading file files/7.txt
+Sedning now
+Send
+pid = Send
+pid = 1, tid = 0 , file = 1, tid = 1 , file = 2.txt
+9.txtThread = 0 is reading file files/2.txt
+
+Sedning now
+Thread = 1 is reading file files/9.txtSend
+pid = 
+1, tid = 0 , file = 12.txt
+Thread = 0 is reading file files/12.txt
+Sedning now
+Sedning now
+Send
+Send
+pid = 1, tid = 0 , file = 15.txt
+Thread = 0 is reading file files/15.txt
+pid = 1, tid = 1 , file = 16.txt
+Thread = 1Sedning now
+ is reading file files/16.txt
+Send
+pid = Sedning now
+1, tid = 0Send
+pid = 1, tid = 1 , file = 11.txt
+Thread = 1 is reading file files/11.txt
+ , file = 3.txt
+Thread = 0 is reading file files/3.txt
+Sedning now
+Sedning now
+Send
+pid = 1, tid = 1 , file = 8.txt
+Thread = 1 is reading file files/8.txt
+Send
+pid = Sedning now
+1, tid = 0 , file = 4.txt
+Thread = 0 is reading file files/4.txt
+Sedning now
+Send
+pid = 1, tid = 1Send
+ , file = 1.txt
+pid = 1, tid = 0 , file = 14.txt
+Thread = 0 is reading file files/14.txt
+Sedning now
+Thread = 1 is reading file files/1.txtSend
+
+Sedning now
+pid = 1, tid = 0 , file = 13.txt
+Thread = 0 is reading file files/13.txt
+Send
+pid = 1, tid = 1 , file = 6.txt
+Thread = 1Sedning now
+ is reading file files/6.txt
+SendSedning now
+
+Send
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 190019.0 ON scholar-a002 CANCELLED AT 2022-11-27T11:27:18 ***
+slurmstepd: error: *** JOB 190019 ON scholar-a002 CANCELLED AT 2022-11-27T11:27:18 ***
