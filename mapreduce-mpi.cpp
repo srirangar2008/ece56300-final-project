@@ -36,6 +36,59 @@ int startReducer[MAX_REDUCERS];
 int mapperDone[MAX_REDUCERS];
 int sendCompleted;
 std::mutex m;
+std::map<string, int> wordCountReducer;
+int numMappers;
+int mapperDoneMPI[MAX_REDUCERS];
+
+int checkAllDone()
+{
+	bool res = false;
+	
+	for(int i = 0; i < numMappers; i++)
+	{
+		char filename[10] = {0};
+		snprintf(filename, 10, "status_%d", i);
+		//string filename = to_string(i) + "_status.txt";
+		struct stat sb;
+		int ret = stat(filename, &sb);
+		if(ret == -1)
+		{
+			return 1;
+		}
+		else
+		{
+			string cmd = "cat " + string(filename);
+			FILE *fp;
+			char data[5]= {0};;
+			fp = popen(cmd.c_str(), "r");
+			fgets(data, 5, fp);
+			cout << "filename : " << filename << ", data : " << data << endl;
+			if(strncmp(data, "true", strlen("true")) == 0)
+			{
+				cout << "Res true" << endl;
+				res = true;
+			}
+			else
+			{
+				cout << "Res false" << endl;
+				res = false;
+				break;
+			}
+		}
+		
+	}
+	
+	if(res){
+		cout << "return value = 0" << endl;
+		return 0;
+	}
+	else
+	{
+		cout << "return value = 1" << endl;
+		return 1;
+	}
+}
+
 
 //Can optimize further by ensuring that the sizes are distributed well. 
 
@@ -113,6 +166,7 @@ void readFile(string filename)
 	//for(auto itr : wordCount)
 	//for(itr = wordCount.begin(); itr != wordCount.end(); itr++)
 	//#pragma omp parallel for num_threads(2)
+	cout << "Starting mapping for " << filename << endl;
 	start = clock();
 	for(int i = 0; i < wordCount.size(); i++)
 	{
@@ -131,11 +185,13 @@ void readFile(string filename)
 		memset(temp.word, 0, 64 * sizeof(char));
 		strncpy(temp.word, hme.word.c_str(), strlen(hme.word.c_str()));
 		temp.count = hme.count;
+		//cout << "Pid : " << pid << ", tid : " << omp_get_thread_num() << "Mapping iter = " << i << ", for filename : " << filename << endl;
 		#pragma omp critical
 		{
 			hashMap[hashVal].push_back(hme);
-			int reducer_id = hashVal % maxThreads;
-			MPI_Send(&temp, sizeof(temp), tempData, reducer_id, 1, MPI_COMM_WORLD);
+			int reducer_id = hashVal % numMappers;
+			//cout << "PID : " << pid << ", tid : " << omp_get_thread_num() << "Sending : " << temp.word << ", " << temp.count << endl;
+			MPI_Ssend(&temp, sizeof(temp), tempData, reducer_id, 1, MPI_COMM_WORLD);
 			//Putting to the corresponding reducer
 			
 			//cout << "Sedning now" << endl;
@@ -256,11 +312,23 @@ void reducerThread(int reducerID)
 	{
 		//cout << "Waitign for receiev" << endl;
 		int rc = MPI_Recv(&temp, sizeof(temp), mpi_datatype,  MPI_ANY_SOURCE, 1 , MPI_COMM_WORLD, &stat);
-		out << "Received data = " << ", name = " << temp.word << ", count = " << temp.count << endl;
+		//cout << "Received data = " << ", name = " << temp.word << ", count = " << temp.count << endl;
 		if(temp.count == -100)
 		{
+			cout << "recvd stop signal to reducer" << reducerID << endl;
 			break;
 		}
+		//cout << "Word = " << temp.word << endl;
+		//wordCountReducer[string(temp.word)] += temp.count;
+		#pragma omp critical
+		{
+			wordCountReducer[string(temp.word)] += temp.count;
+		}
+		
+	}
+	for(auto i : wordCountReducer)
+	{
+		out << "word = " << i.first << ", count = " << i.second << endl;
 	}
 	out.close();
 	cout << "Reducer Thread " << reducerID << " is returning from reduceFunction" << endl;
@@ -287,7 +355,7 @@ int main(int argc, char* argv[])
 	omp_set_nested(1);
 	omp_set_num_threads(numThreads);
 	cout << "Hello" << endl;
-	int numMappers = numP / 2;
+	numMappers = numP / 2;
 	int numReducers = numMappers;
 	
 	cout << "Pid : " << pid << ", numMappers = " << numMappers << ", numReducers = " << numReducers << endl;
@@ -310,10 +378,38 @@ int main(int argc, char* argv[])
 		start = MPI_Wtime();
 		start_c = clock();
 	}
+	/*MPI_Group orig_group, newgrp;
+	MPI_Comm mapcomm;
+	int ranks[numMappers];
+	for(int i = 0; i < numMappers; i++)
+	{
+		if(pid >= numMappers)
+		{
+			ranks[i] = i + numMappers;
+			cout << "ranks[" << i << "] = " << ranks[i] << endl;
+		}
+	}
+	*/
 	
+	
+	//MPI_Comm_group(MPI_COMM_WORLD, &orig_group);
+		
 	if(pid >= numMappers)
 	{
+		/*MPI_Group_incl(orig_group, numMappers, ranks, &newgrp);
+	
+		MPI_Comm_create(MPI_COMM_WORLD, newgrp, &mapcomm); 
 		cout << "Pid : " << pid << "This is a mapper Thread" << endl;
+		//int new_rank = pid - numMappers;
+		
+		//MPI_Comm_split(MPI_COMM_WORLD, 0, pid, &mapcomm);
+		
+		int maprank, mapsize;
+		MPI_Group_rank(mapcomm, &maprank);
+		//MPI_Comm_size(mapcomm, &mapsize);
+		
+		cout << "PID : " << pid << ", maprank : " << maprank << ", mapsize : " << mapsize << "!" << endl;*/
+		
 		#pragma omp parallel 
 		{
 			#pragma omp master
@@ -356,6 +452,21 @@ int main(int argc, char* argv[])
 						*/
 						
 						//readFile("files/15.txt");
+						#pragma omp critical
+						{
+							mapperDoneMPI[pid - numMappers] = 1;
+							cout << "PID : " << pid << ", setting the " << pid - numMappers << " in global array" << endl;
+							
+							
+						}
+						ofstream outdata;
+						int mapper = pid - numMappers;
+						char filename[10] = {0};
+						snprintf(filename, 10, "status_%d", mapper);
+						string name = string(filename);
+						outdata.open(name);
+						outdata << "true" << endl;
+						outdata.close();
 				}
 				
 			}
@@ -389,9 +500,10 @@ int main(int argc, char* argv[])
 		cout << "Pid : " << pid << ", Reducer thread returned" << endl;*/
 	}
 	
-	
 	if(pid >= numMappers)
 	{
+		while(checkAllDone());
+		cout << "Pid : " << pid << " sending stop to reducer" << endl;
 		MPI_Datatype  data = makeType();
 		struct hme_mpi temp;
 		temp.count = -100;
@@ -408,7 +520,7 @@ int main(int argc, char* argv[])
 	{
 		end = MPI_Wtime();
 		end_c = clock();
-		cout << "Pid = " << pid << ",Time elapsed = " << (end_c - start_c)/CLOCKS_PER_SEC << endl;;
+		cout << "Pid = " << pid << ",Time elapsed = " << (double)(end_c - start_c)/CLOCKS_PER_SEC << endl;;
 	}
 	//MPI_Barrier(MPI_COMM_WORLD);
 	MPI_Finalize();
