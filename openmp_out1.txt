@@ -1,0 +1,323 @@
+Hello
+5.txt
+2.txt
+12.txt
+15.txt
+3.txt
+4.txt
+14.txt
+13.txt
+7.txt
+9.txt
+16.txt
+11.txt
+8.txt
+1.txt
+6.txt
+tid = 0 , file = 5.txt
+Thread = 0 is reading file files/5.txt
+Thread num : 0 - Time taken to read filename files/5.txt = 0.53
+Thread Num : 0 - Time taken for mapping words of file : files/5.txt = 5.52
+tid = 0 , file = 2.txt
+Thread = 0 is reading file files/2.txt
+Thread num : 0 - Time taken to read filename files/2.txt = 0.02
+Thread Num : 0 - Time taken for mapping words of file : files/2.txt = 0.08
+tid = 0 , file = 12.txt
+Thread = 0 is reading file files/12.txt
+Thread num : 0 - Time taken to read filename files/12.txt = 0.05
+Thread Num : 0 - Time taken for mapping words of file : files/12.txt = 0.54
+tid = 0 , file = 15.txt
+Thread = 0 is reading file files/15.txt
+Thread num : 0 - Time taken to read filename files/15.txt = 0.12
+Thread Num : 0 - Time taken for mapping words of file : files/15.txt = 1.27
+tid = 0 , file = 3.txt
+Thread = 0 is reading file files/3.txt
+Thread num : 0 - Time taken to read filename files/3.txt = 0.33
+Thread Num : 0 - Time taken for mapping words of file : files/3.txt = 2.84
+tid = 0 , file = 4.txt
+Thread = 0 is reading file files/4.txt
+Thread num : 0 - Time taken to read filename files/4.txt = 0.18
+Thread Num : 0 - Time taken for mapping words of file : files/4.txt = 1.45
+tid = 0 , file = 14.txt
+Thread = 0 is reading file files/14.txt
+Thread num : 0 - Time taken to read filename files/14.txt = 0.08
+Thread Num : 0 - Time taken for mapping words of file : files/14.txt = 1.16
+tid = 0 , file = 13.txt
+Thread = 0 is reading file files/13.txt
+Thread num : 0 - Time taken to read filename files/13.txt = 0.02
+Thread Num : 0 - Time taken for mapping words of file : files/13.txt = 0.07
+tid = 0 , file = 7.txt
+Thread = 0 is reading file files/7.txt
+Thread num : 0 - Time taken to read filename files/7.txt = 0.01
+Thread Num : 0 - Time taken for mapping words of file : files/7.txt = 0.04
+tid = 0 , file = 9.txt
+Thread = 0 is reading file files/9.txt
+Thread num : 0 - Time taken to read filename files/9.txt = 0.34
+Thread Num : 0 - Time taken for mapping words of file : files/9.txt = 4.66
+tid = 0 , file = 16.txt
+Thread = 0 is reading file files/16.txt
+Thread num : 0 - Time taken to read filename files/16.txt = 0.03
+Thread Num : 0 - Time taken for mapping words of file : files/16.txt = 0.31
+tid = 0 , file = 11.txt
+Thread = 0 is reading file files/11.txt
+Thread num : 0 - Time taken to read filename files/11.txt = 0.11
+Thread Num : 0 - Time taken for mapping words of file : files/11.txt = 1.1
+tid = 0 , file = 8.txt
+Thread = 0 is reading file files/8.txt
+Thread num : 0 - Time taken to read filename files/8.txt = 0.02
+Thread Num : 0 - Time taken for mapping words of file : files/8.txt = 0.07
+tid = 0 , file = 1.txt
+Thread = 0 is reading file files/1.txt
+Thread num : 0 - Time taken to read filename files/1.txt = 0.04
+Thread Num : 0 - Time taken for mapping words of file : files/1.txt = 0.34
+tid = 0 , file = 6.txt
+Thread = 0 is reading file files/6.txt
+Thread num : 0 - Time taken to read filename files/6.txt = 0.23
+Thread Num : 0 - Time taken for mapping words of file : files/6.txt = 2.08
+Reducer Thread : 0
+Time elapsed = 23.8742
+Hello
+5.txt
+2.txt
+12.txt
+15.txt
+3.txt
+4.txt
+14.txt
+13.txt
+7.txt
+9.txt
+16.txt
+11.txt
+8.txt
+1.txt
+6.txt
+Reducer Thread : 1
+tid = 1 , file = 7.txt
+tid = 0 , file = 5.txt
+Thread = 0 is reading file files/5.txtThread = 1
+ is reading file files/7.txt
+Thread num : 1 - Time taken to read filename files/7.txt = 0.02
+Thread Num : 1 - Time taken for mapping words of file : files/7.txt = 0.09
+tid = 1 , file = 9.txt
+Thread = 1 is reading file files/9.txt
+Thread num : 1 - Time taken to read filename files/9.txt = 1.13
+Reducer Thread : 1
+Thread num : 0 - Time taken to read filename files/5.txt = 1.56
+Thread Num : 1 - Time taken for mapping words of file : files/9.txt = 9.07
+tid = 1 , file = 16.txt
+Thread = 1 is reading file files/16.txt
+Thread num : 1 - Time taken to read filename files/16.txt = 0.07
+Thread Num : 1 - Time taken for mapping words of file : files/16.txt = 0.55
+tid = 1 , file = 11.txt
+Thread = 1 is reading file files/11.txt
+Thread num : 1 - Time taken to read filename files/11.txt = 0.22
+Thread Num : 0 - Time taken for mapping words of file : files/5.txt = 11.16
+tid = 0 , file = 2.txt
+Thread = 0 is reading file files/2.txt
+Thread num : 0 - Time taken to read filename files/2.txt = 0.04
+Thread Num : 0 - Time taken for mapping words of file : files/2.txt = 0.15
+tid = 0 , file = 12.txt
+Thread = 0 is reading file files/12.txt
+Thread num : 0 - Time taken to read filename files/12.txt = 0.11
+Thread Num : 1 - Time taken for mapping words of file : files/11.txt = 2.05
+tid = 1 , file = 8.txt
+Thread = 1 is reading file files/8.txt
+Thread num : 1 - Time taken to read filename files/8.txt = 0.04
+Thread Num : 1 - Time taken for mapping words of file : files/8.txt = 0.14
+tid = 1 , file = 1.txt
+Thread = 1 is reading file files/1.txt
+Thread num : 1 - Time taken to read filename files/1.txt = 0.09
+Thread Num : 1 - Time taken for mapping words of file : files/1.txt = 0.62
+tid = 1 , file = 6.txt
+Thread = 1 is reading file files/6.txt
+Thread Num : 0 - Time taken for mapping words of file : files/12.txt = 1.09
+tid = 0 , file = 15.txt
+Thread = 0 is reading file files/15.txt
+Thread num : 0 - Time taken to read filename files/15.txt = 0.26
+Thread num : 1 - Time taken to read filename files/6.txt = 0.47
+Thread Num : 0 - Time taken for mapping words of file : files/15.txt = 2.55
+tid = 0 , file = 3.txt
+Thread = 0 is reading file files/3.txt
+Thread num : 0 - Time taken to read filename files/3.txt = 0.65
+Thread Num : 1 - Time taken for mapping words of file : files/6.txt = 4.06
+Thread Num : 0 - Time taken for mapping words of file : files/3.txt = 3.36
+tid = 0 , file = 4.txt
+Thread = 0 is reading file files/4.txt
+Thread num : 0 - Time taken to read filename files/4.txt = 0.19
+Thread Num : 0 - Time taken for mapping words of file : files/4.txt = 1.44
+tid = 0 , file = 14.txt
+Thread = 0 is reading file files/14.txt
+Thread num : 0 - Time taken to read filename files/14.txt = 0.08
+Thread Num : 0 - Time taken for mapping words of file : files/14.txt = 1.14
+tid = 0 , file = 13.txt
+Thread = 0 is reading file files/13.txt
+Thread num : 0 - Time taken to read filename files/13.txt = 0.02
+Thread Num : 0 - Time taken for mapping words of file : files/13.txt = 0.08
+Time elapsed = 14.3983
+Hello
+5.txt
+2.txt
+12.txt
+15.txt
+3.txt
+4.txt
+14.txt
+13.txt
+7.txt
+9.txt
+16.txt
+11.txt
+8.txt
+1.txt
+6.txt
+Reducer Thread : 1
+Reducer Thread : 3
+Reducer Thread : 2
+tid = 0 , file = 5.txt
+tid = 1 , file = 3.txt
+Thread = tid = Thread = 10 is reading file 2 is reading file files/3.txt
+files/5.txt
+ , file = 7.txt
+Thread = 2 is reading file tid = files/7.txt
+3 , file = 8.txt
+Thread = 3 is reading file files/8.txt
+Thread num : 2 - Time taken to read filename files/7.txt = 0.07
+Thread num : 3 - Time taken to read filename files/8.txt = 0.16
+Thread Num : 2 - Time taken for mapping words of file : files/7.txt = 0.22
+tid = 2 , file = 9.txt
+Thread = 2 is reading file files/9.txt
+Reducer Thread : 2
+Thread Num : 3 - Time taken for mapping words of file : files/8.txt = 0.42
+tid = 3 , file = 1.txt
+Thread = 3 is reading file files/1.txt
+Thread num : 3 - Time taken to read filename files/1.txt = 0.29
+Thread num : 1 - Time taken to read filename files/3.txt = 2.09
+Thread Num : 3 - Time taken for mapping words of file : files/1.txt = 1.51
+tid = 3 , file = 6.txt
+Thread = 3 is reading file files/6.txt
+Thread num : 2 - Time taken to read filename files/9.txt = 2.11
+Thread num : 0 - Time taken to read filename files/5.txt = 3.29
+Thread num : 3 - Time taken to read filename files/6.txt = 1.18
+Thread Num : 3 - Time taken for mapping words of file : files/6.txt = 10.13
+Thread Num : 1 - Time taken for mapping words of file : files/3.txt = 13.96
+tid = 1 , file = 4.txt
+Thread = 1 is reading file files/4.txt
+Thread num : 1 - Time taken to read filename files/4.txt = 0.56
+Thread Num : 2 - Time taken for mapping words of file : files/9.txt = 18.28
+tid = 2 , file = 16.txt
+Thread = 2 is reading file files/16.txt
+Thread num : 2 - Time taken to read filename files/16.txt = 0.09
+Thread Num : 1 - Time taken for mapping words of file : files/4.txt = 4.3
+tid = 1 , file = 14.txt
+Thread = 1 is reading file files/14.txt
+Thread num : 1 - Time taken to read filename files/14.txt = 0.26
+Thread Num : 2 - Time taken for mapping words of file : files/16.txt = 0.8
+tid = 2 , file = 11.txt
+Thread = 2 is reading file files/11.txt
+Thread num : 2 - Time taken to read filename files/11.txt = 0.32
+Thread Num : 1 - Time taken for mapping words of file : files/14.txt = 3.46
+tid = 1 , file = 13.txt
+Thread = 1 is reading file files/13.txt
+Thread num : 1 - Time taken to read filename files/13.txt = 0.07
+Thread Num : 2 - Time taken for mapping words of file : files/11.txt = 2.95
+Thread Num : 1 - Time taken for mapping words of file : files/13.txt = 0.18
+Thread Num : 0 - Time taken for mapping words of file : files/5.txt = 21.67
+tid = 0 , file = 2.txt
+Thread = 0 is reading file files/2.txt
+Thread num : 0 - Time taken to read filename files/2.txt = 0.02
+Thread Num : 0 - Time taken for mapping words of file : files/2.txt = 0.08
+tid = 0 , file = 12.txt
+Thread = 0 is reading file files/12.txt
+Thread num : 0 - Time taken to read filename files/12.txt = 0.06
+Thread Num : 0 - Time taken for mapping words of file : files/12.txt = 0.54
+tid = 0 , file = 15.txt
+Thread = 0 is reading file files/15.txt
+Thread num : 0 - Time taken to read filename files/15.txt = 0.11
+Thread Num : 0 - Time taken for mapping words of file : files/15.txt = 1.3
+Time elapsed = 8.41582
+Hello
+5.txt
+2.txt
+12.txt
+15.txt
+3.txt
+4.txt
+14.txt
+13.txt
+7.txt
+9.txt
+16.txt
+11.txt
+8.txt
+1.txt
+6.txt
+Reducer Thread : 7
+Reducer Thread : 2
+Reducer Thread : 3
+Reducer Thread : 4
+Reducer Thread : 5
+Reducer Thread : 1
+Reducer Thread : 6
+tid = 5 , file = 16.txt
+tid = 6 , file = 8.txt
+tid = 0Thread =  , file = 65.txt is reading file files/8.txt
+
+Thread = 5 is reading file files/16.txt
+tid = Thread = 40 is reading file files/5.txt
+ , file = 7.txt
+Thread = 4 is reading file tid = files/7.txt
+2 , file = 3.txt
+Thread = tid = 27 is reading file  , file = 6.txtfiles/3.txt
+
+Thread = tid = 7 is reading file files/6.txt
+3 , file = 14.txt
+tid = Thread = 3 is reading file 1files/14.txt , file = 12.txt
+
+Thread = 1 is reading file files/12.txt
+Thread num : 4 - Time taken to read filename files/7.txt = 0.19
+Thread num : 6 - Time taken to read filename files/8.txt = 0.42
+Thread num : 5 - Time taken to read filename files/16.txt = 0.7
+Thread Num : 4 - Time taken for mapping words of file : files/7.txt = 0.61
+tid = 4 , file = 9.txt
+Thread = 4 is reading file files/9.txt
+Reducer Thread : 4
+Thread num : 1 - Time taken to read filename files/12.txt = 1.15
+Thread Num : 6 - Time taken for mapping words of file : files/8.txt = 1.01
+tid = 6 , file = 1.txt
+Thread = 6 is reading file files/1.txt
+Thread num : 3 - Time taken to read filename files/14.txt = 1.7
+Thread num : 6 - Time taken to read filename files/1.txt = 0.7
+Thread num : 7 - Time taken to read filename files/6.txt = 3.94
+Thread Num : 5 - Time taken for mapping words of file : files/16.txt = 3.86
+tid = 5 , file = 11.txt
+Thread = 5 is reading file files/11.txt
+Thread num : 2 - Time taken to read filename files/3.txt = 5.39
+Thread Num : 6 - Time taken for mapping words of file : files/1.txt = 3.94
+Thread num : 5 - Time taken to read filename files/11.txt = 1.57
+Thread num : 4 - Time taken to read filename files/9.txt = 5.5
+Thread Num : 1 - Time taken for mapping words of file : files/12.txt = 6.63
+tid = 1 , file = 15.txt
+Thread = 1 is reading file files/15.txt
+Thread num : 0 - Time taken to read filename files/5.txt = 8.22
+Thread num : 1 - Time taken to read filename files/15.txt = 1.32
+Thread Num : 3 - Time taken for mapping words of file : files/14.txt = 12.94
+tid = 3 , file = 13.txt
+Thread = 3 is reading file files/13.txt
+Thread num : 3 - Time taken to read filename files/13.txt = 0.18
+Thread Num : 3 - Time taken for mapping words of file : files/13.txt = 0.63
+Thread Num : 5 - Time taken for mapping words of file : files/11.txt = 10.33
+Thread Num : 1 - Time taken for mapping words of file : files/15.txt = 10.95
+Thread Num : 7 - Time taken for mapping words of file : files/6.txt = 18.04
+Thread Num : 2 - Time taken for mapping words of file : files/3.txt = 20.22
+tid = 2 , file = 4.txt
+Thread = 2 is reading file files/4.txt
+Thread num : 2 - Time taken to read filename files/4.txt = 0.57
+Thread Num : 2 - Time taken for mapping words of file : files/4.txt = 4.13
+Thread Num : 4 - Time taken for mapping words of file : files/9.txt = 24.65
+Thread Num : 0 - Time taken for mapping words of file : files/5.txt = 24
+tid = 0 , file = 2.txt
+Thread = 0 is reading file files/2.txt
+Thread num : 0 - Time taken to read filename files/2.txt = 0.02
+Thread Num : 0 - Time taken for mapping words of file : files/2.txt = 0.07
+Time elapsed = 6.50131
