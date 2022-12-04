@@ -11,6 +11,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <queue>
+#include <sys/time.h>
 
 #define MAX_REDUCERS 16
 
@@ -52,6 +53,8 @@ void readFile(string filename)
 	infile.open(filename);
 	string word;
 	int count = 0;
+	clock_t start, end;
+	start = clock();
 	while(infile >> word)
 	{
 		//Removing the punctuations
@@ -61,14 +64,19 @@ void readFile(string filename)
 		std::transform(word.begin(), word.end(), word.begin(), ::tolower);
 		++wordCount[word];
 	}
+	end = clock();
+	cout << "Thread num : " << omp_get_thread_num() << " - Time taken to read filename " << filename << " = " << ((double)(end - start)/CLOCKS_PER_SEC) << endl;
 	//cout << "Total words in file " << filename << " = " << count << endl;
-	cout << omp_get_thread_num() << ": wordcoutn size = " << wordCount.size() << endl;
+	//cout << omp_get_thread_num() << ": wordcoutn size = " << wordCount.size() << endl;
 //	map<std::string, int>::iterator itr;
 //	itr = wordCount.begin();
 	
 	//for(auto itr : wordCount)
 	//for(itr = wordCount.begin(); itr != wordCount.end(); itr++)
 	//#pragma omp parallel for num_threads(2)
+	clock_t start_m, end_m;
+	#pragma omp critical
+	start_m = clock();
 	for(int i = 0; i < wordCount.size(); i++)
 	{
 		
@@ -91,7 +99,10 @@ void readFile(string filename)
 		}
 		//cout << "Word = " << itr->first << ", Count = " << itr->second << endl;
 	}
-	cout << omp_get_thread_num() << ": Hashmap size = " << hashMap.size() << endl;
+	#pragma omp critical
+	end_m = clock();
+	cout << "Thread Num : " << omp_get_thread_num() << " - Time taken for mapping words of file : " << filename << " = " << ((double)(end_m - start_m)/CLOCKS_PER_SEC) << endl;
+	//cout << omp_get_thread_num() << ": Hashmap size = " << hashMap.size() << endl;
 	mapperDone[omp_get_thread_num()] = 1;
 	//int testHashVal = hashFunction("you");
 	//cout << "testHashVal = " << testHashVal << endl;
@@ -99,8 +110,8 @@ void readFile(string filename)
 	//{
 //		cout << "Word = " << hashMap[testHashVal].at(i).word << ", count = " << hashMap[testHashVal].at(i).count << endl;
 //	}
-	cout << "Thread " << omp_get_thread_num() << " finished reading file : " << filename << endl;
-	cout << "reducerQueue[" << omp_get_thread_num() << "] = " << reducerQueue[omp_get_thread_num()].size() << endl;
+	//cout << "Thread " << omp_get_thread_num() << " finished reading file : " << filename << endl;
+	//cout << "reducerQueue[" << omp_get_thread_num() << "] = " << reducerQueue[omp_get_thread_num()].size() << endl;
 	/*for(int i = 0; i < hashMap[testHashVal].size(); i++)
 	{
 		cout << "Thread " << omp_get_thread_num() << ", file : " << filename <<  ", word = " << hashMap[testHashVal].at(i).word << ", count = " << 
