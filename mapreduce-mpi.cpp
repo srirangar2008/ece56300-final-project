@@ -373,11 +373,11 @@ int main(int argc, char* argv[])
 	}
 	
 	double start, end;
-	if(pid == 0)
-	{
+	//if(pid == 0)
+	//{
 		start = MPI_Wtime();
 		start_c = clock();
-	}
+	//}
 	/*MPI_Group orig_group, newgrp;
 	MPI_Comm mapcomm;
 	int ranks[numMappers];
@@ -516,7 +516,7 @@ int main(int argc, char* argv[])
 	//MPI_Barrier(MPI_COMM_WORLD);
 	//end_c = clock();
 	//cout << "Pid = " << pid << ",Time elapsed = " << (end_c - start_c)/CLOCKS_PER_SEC << endl;;
-	if(pid == 0)
+	//if(pid == 0)
 	{
 		end = MPI_Wtime();
 		end_c = clock();

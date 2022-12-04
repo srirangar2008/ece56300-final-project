@@ -1,0 +1,233 @@
+Hello
+Pid : 7, numMappers = 4, numReducers = 4
+Hello
+Pid : 3, numMappers = 4, numReducers = 4
+Hello
+Pid : 5, numMappers = 4, numReducers = 4
+Hello
+Pid : 2, numMappers = 4, numReducers = 4
+Hello
+Pid : 6, numMappers = 4, numReducers = 4
+Hello
+filesize of 5.txt is 3288707
+filesize of 2.txt is 127913
+filesize of 5.txt is 3288707
+filesize of 2.txt is 127913
+filesize of 12.txt is 377195
+Pid : 1, numMappers = 4, numReducers = 4
+filesize of 5.txt is 3288707
+filesize of 2.txt is 127913
+filesize of 12.txt is 377195
+filesize of 15.txt is 710134
+filesize of 3.txt is 2039777
+filesize of 4.txt is 1177120
+filesize of 14.txt is 535045
+filesize of 13.txt is 121093
+filesize of 12.txt is 377195
+filesize of 15.txt is 710134
+filesize of 3.txt is 2039777
+filesize of 4.txt is 1177120
+filesize of 14.txt is 535045
+filesize of 13.txt is 121093
+filesize of 7.txt is 55734
+filesize of 9.txt is 2134492
+filesize of 16.txt is 206943
+filesize of 11.txt is 682370
+filesize of 5.txt is 3288707
+filesize of 2.txt is 127913
+filesize of 12.txt is 377195
+filesize of 15.txt is 710134
+filesize of 3.txt is 2039777
+filesize of 4.txt is 1177120
+filesize of 14.txt is 535045
+filesize of 13.txt is 121093
+filesize of 7.txt is 55734
+filesize of 9.txt is 2134492
+filesize of 16.txt is 206943
+filesize of 11.txt is 682370
+filesize of 8.txt is 130835
+filesize of 1.txt is 265581
+filesize of 15.txt is 710134
+filesize of 3.txt is 2039777
+filesize of 4.txt is 1177120
+filesize of 14.txt is 535045
+filesize of 13.txt is 121093
+filesize of 7.txt is 55734
+filesize of 9.txt is 2134492
+filesize of 16.txt is 206943
+filesize of 11.txt is 682370
+filesize of 8.txt is 130835
+filesize of 1.txt is 265581
+filesize of 6.txt is 1395758
+filesize of 7.txt is 55734
+filesize of 9.txt is 2134492
+filesize of 16.txt is 206943
+filesize of 11.txt is 682370
+filesize of 8.txt is 130835
+filesize of 1.txt is 265581
+filesize of 6.txt is 1395758
+Pid = 2
+Pid : 2This is a reducer Thread
+filesize of 8.txt is 130835
+filesize of 1.txt is 265581
+filesize of 6.txt is 1395758
+Pid = 3
+Pid : 3This is a reducer Thread
+Started the reducer thread 3
+filesize of 6.txt is 1395758
+Pid = 5
+filesize of 5.txt is 3288707
+filesize of 2.txt is 127913
+filesize of 12.txt is 377195
+filesize of 15.txt is 710134
+filesize of 3.txt is 2039777
+filesize of 4.txt is 1177120
+filesize of 14.txt is 535045
+filesize of 13.txt is 121093
+filesize of 7.txt is 55734
+filesize of 9.txt is 2134492
+Pid = 7
+filesize of 5.txt is 3288707
+filesize of 2.txt is 127913
+Started the reducer thread 2
+filesize of 16.txt is 206943
+filesize of 11.txt is 682370
+filesize of 8.txt is 130835
+filesize of 1.txt is 265581
+filesize of 6.txt is 1395758
+Pid = 6
+Hello
+filesize of 12.txt is 377195
+filesize of 15.txt is 710134
+filesize of 3.txt is 2039777
+filesize of 4.txt is 1177120
+filesize of 14.txt is 535045
+filesize of 13.txt is 121093
+filesize of 7.txt is 55734
+filesize of 9.txt is 2134492
+filesize of 16.txt is 206943
+filesize of 11.txt is 682370
+Pid : 0, numMappers = 4, numReducers = 4
+filesize of 8.txt is 130835
+filesize of 1.txt is 265581
+filesize of 6.txt is 1395758
+Pid = 1
+Pid : 1This is a reducer Thread
+Started the reducer thread 1
+filesize of 5.txt is 3288707
+filesize of 2.txt is 127913
+filesize of 12.txt is 377195
+filesize of 15.txt is 710134
+filesize of 3.txt is 2039777
+filesize of 4.txt is 1177120
+filesize of 14.txt is 535045
+filesize of 13.txt is 121093
+filesize of 7.txt is 55734
+filesize of 9.txt is 2134492
+filesize of 16.txt is 206943
+filesize of 11.txt is 682370
+filesize of 8.txt is 130835
+filesize of 1.txt is 265581
+filesize of 6.txt is 1395758
+Master Thread
+Pid : 0This is a reducer Thread
+Started the reducer thread 0
+Hello
+Pid : 4, numMappers = 4, numReducers = 4
+filesize of 5.txt is 3288707
+filesize of 2.txt is 127913
+filesize of 12.txt is 377195
+filesize of 15.txt is 710134
+filesize of 3.txt is 2039777
+filesize of 4.txt is 1177120
+filesize of 14.txt is 535045
+filesize of 13.txt is 121093
+filesize of 7.txt is 55734
+filesize of 9.txt is 2134492
+filesize of 16.txt is 206943
+filesize of 11.txt is 682370
+filesize of 8.txt is 130835
+filesize of 1.txt is 265581
+filesize of 6.txt is 1395758
+Pid = 4
+starting parallely
+Pid = 5, FilePerMapper = 3, scaledMapperPid = 1
+Pid = 5, startFileNum = 3, endFileNum = 6
+pid = 5, tid = 0 , file = 15.txt
+Thread = 0 is reading file files/15.txt
+starting parallely
+Pid = 7, FilePerMapper = 3, scaledMapperPid = 3
+Pid = 7, startFileNum = 9, endFileNum = 15
+pid = 7, tid = 0 , file = 9.txt
+Thread = 0 is reading file files/9.txt
+starting parallely
+Pid = 6, FilePerMapper = 3, scaledMapperPid = 2
+Pid = 6, startFileNum = 6, endFileNum = 9
+pid = 6, tid = 0 , file = 14.txt
+Thread = 0 is reading file files/14.txt
+starting parallely
+Pid = 4, FilePerMapper = 3, scaledMapperPid = 0
+Pid = 4, startFileNum = 0, endFileNum = 3
+pid = 4, tid = 0 , file = 5.txt
+Thread = 0 is reading file files/5.txt
+Pid = 6, tid : 0: wordcoutn size = 9564
+Tiem for reading files/14.txt = 0.09
+Starting mapping for files/14.txt
+Pid = 5, tid : 0: wordcoutn size = 10065
+Tiem for reading files/15.txt = 0.12
+Starting mapping for files/15.txt
+Pid = 7, tid : 0: wordcoutn size = 18644
+Tiem for reading files/9.txt = 0.23
+Starting mapping for files/9.txt
+Pid = 4, tid : 0: wordcoutn size = 20451
+Tiem for reading files/5.txt = 0.33
+Starting mapping for files/5.txt
+Tiem for communicating the contents of the file files/14.txt to reducers = 1.23
+pid = 6,tid : 0: Hashmap size = 500
+pid = 6Thread 0 finished reading file : files/14.txt
+pid = 6, tid = 0 , file = 13.txt
+Thread = 0 is reading file files/13.txt
+Pid = 6, tid : 0: wordcoutn size = 3033
+Tiem for reading files/13.txt = 0.01
+Starting mapping for files/13.txt
+Tiem for communicating the contents of the file files/13.txt to reducers = 0.11
+pid = 6,tid : 0: Hashmap size = 494
+pid = 6Thread 0 finished reading file : files/13.txt
+pid = 6, tid = 0 , file = 7.txt
+Thread = 0 is reading file files/7.txt
+Pid = 6, tid : 0: wordcoutn size = 2234
+Tiem for reading files/7.txt = 0
+Starting mapping for files/7.txt
+Tiem for communicating the contents of the file files/15.txt to reducers = 1.34
+pid = 5,tid : 0: Hashmap size = 500
+pid = 5Thread 0 finished reading file : files/15.txt
+pid = 5, tid = 0 , file = 3.txt
+Thread = 0 is reading file files/3.txt
+Tiem for communicating the contents of the file files/7.txt to reducers = 0.06
+pid = 6,tid : 0: Hashmap size = 470
+pid = 6Thread 0 finished reading file : files/7.txt
+PID : 6, setting the 2 in global array
+filename : status_0, data : true
+Res true
+filename : status_1, data : true
+Res true
+filename : status_2, data : true
+Res true
+filename : status_3, data : true
+Res true
+return value = 0
+Pid : 6 sending stop to reducer
+pid = 6, stoping reducer thread 2
+recvd stop signal to reducer2
+PId = 6, at barrier
+Pid = 6,Time elapsed = 1.5
+Reducer Thread 2 is returning from reduceFunction
+Pid : 2, Reducer thread returned
+PId = 2, at barrier
+Pid = 2,Time elapsed = -2.67723
+Pid = 5, tid : 0: wordcoutn size = 14704
+Tiem for reading files/3.txt = 0.15
+Starting mapping for files/3.txt
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 193161.0 ON scholar-a003 CANCELLED AT 2022-12-04T13:05:07 ***
+slurmstepd: error: *** JOB 193161 ON scholar-a003 CANCELLED AT 2022-12-04T13:05:07 ***

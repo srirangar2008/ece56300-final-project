@@ -1,0 +1,230 @@
+Hello
+Pid : 3, numMappers = 2, numReducers = 2
+Hello
+Pid : 1, numMappers = 2, numReducers = 2
+Hello
+Pid : 0, numMappers = 2, numReducers = 2
+Hello
+Pid : 2, numMappers = 2, numReducers = 2
+filesize of 5.txt is 3288707
+filesize of 5.txt is 3288707
+filesize of 2.txt is 127913
+filesize of 12.txt is 377195
+filesize of 15.txt is 710134
+filesize of 3.txt is 2039777
+filesize of 4.txt is 1177120
+filesize of 14.txt is 535045
+filesize of 5.txt is 3288707
+filesize of 2.txt is 127913
+filesize of 12.txt is 377195
+filesize of 15.txt is 710134
+filesize of 3.txt is 2039777
+filesize of 2.txt is 127913
+filesize of 12.txt is 377195
+filesize of 15.txt is 710134
+filesize of 3.txt is 2039777
+filesize of 4.txt is 1177120
+filesize of 14.txt is 535045
+filesize of 13.txt is 121093
+filesize of 13.txt is 121093
+filesize of 7.txt is 55734
+filesize of 9.txt is 2134492
+filesize of 16.txt is 206943
+filesize of 11.txt is 682370
+filesize of 8.txt is 130835
+filesize of 1.txt is 265581
+filesize of 6.txt is 1395758
+filesize of 4.txt is 1177120
+filesize of 14.txt is 535045
+filesize of 13.txt is 121093
+filesize of 7.txt is 55734
+filesize of 9.txt is 2134492
+filesize of 16.txt is 206943
+filesize of 11.txt is 682370
+filesize of 8.txt is 130835
+filesize of 7.txt is 55734
+filesize of 9.txt is 2134492
+filesize of 16.txt is 206943
+filesize of 11.txt is 682370
+filesize of 8.txt is 130835
+filesize of 1.txt is 265581
+filesize of 6.txt is 1395758
+filesize of 5.txt is 3288707
+filesize of 2.txt is 127913
+Pid = 3
+filesize of 1.txt is 265581
+filesize of 6.txt is 1395758
+Master Thread
+Pid : 0This is a reducer Thread
+Started the reducer thread 0
+Pid = 1
+Pid : 1This is a reducer Thread
+Started the reducer thread 1
+filesize of 12.txt is 377195
+filesize of 15.txt is 710134
+filesize of 3.txt is 2039777
+filesize of 4.txt is 1177120
+filesize of 14.txt is 535045
+filesize of 13.txt is 121093
+filesize of 7.txt is 55734
+filesize of 9.txt is 2134492
+filesize of 16.txt is 206943
+filesize of 11.txt is 682370
+filesize of 8.txt is 130835
+filesize of 1.txt is 265581
+filesize of 6.txt is 1395758
+Pid = 2
+starting parallely
+Pid = 3, FilePerMapper = 7, scaledMapperPid = 1
+Pid = 3, startFileNum = 7, endFileNum = 15
+pid = 3, tid = 0 , file = 13.txt
+Thread = 0 is reading file files/13.txt
+starting parallely
+Pid = 2, FilePerMapper = 7, scaledMapperPid = 0
+Pid = 2, startFileNum = 0, endFileNum = 7
+pid = 2, tid = 0 , file = 5.txt
+Thread = 0 is reading file files/5.txt
+Pid = 3, tid : 0: wordcoutn size = 3033
+Tiem for reading files/13.txt = 0.01
+Starting mapping for files/13.txt
+Tiem for communicating the contents of the file files/13.txt to reducers = 0.09
+pid = 3,tid : 0: Hashmap size = 494
+pid = 3Thread 0 finished reading file : files/13.txt
+pid = 3, tid = 0 , file = 7.txt
+Thread = 0 is reading file files/7.txt
+Pid = 3, tid : 0: wordcoutn size = 2234
+Tiem for reading files/7.txt = 0.01
+Starting mapping for files/7.txt
+Tiem for communicating the contents of the file files/7.txt to reducers = 0.04
+pid = 3,tid : 0: Hashmap size = 470
+pid = 3Thread 0 finished reading file : files/7.txt
+pid = 3, tid = 0 , file = 9.txt
+Thread = 0 is reading file files/9.txt
+Pid = 2, tid : 0: wordcoutn size = 20451
+Tiem for reading files/5.txt = 0.23
+Starting mapping for files/5.txt
+Pid = 3, tid : 0: wordcoutn size = 18644
+Tiem for reading files/9.txt = 0.17
+Starting mapping for files/9.txt
+Tiem for communicating the contents of the file files/9.txt to reducers = 4.44
+pid = 3,tid : 0: Hashmap size = 500
+pid = 3Thread 0 finished reading file : files/9.txt
+pid = 3, tid = 0 , file = 16.txt
+Thread = 0 is reading file files/16.txt
+Pid = 3, tid : 0: wordcoutn size = 5197
+Tiem for reading files/16.txt = 0.01
+Starting mapping for files/16.txt
+Tiem for communicating the contents of the file files/16.txt to reducers = 0.35
+pid = 3,tid : 0: Hashmap size = 496
+pid = 3Thread 0 finished reading file : files/16.txt
+pid = 3, tid = 0 , file = 11.txt
+Thread = 0 is reading file files/11.txt
+Pid = 3, tid : 0: wordcoutn size = 9129
+Tiem for reading files/11.txt = 0.05
+Starting mapping for files/11.txt
+Tiem for communicating the contents of the file files/5.txt to reducers = 5.28
+pid = 2,tid : 0: Hashmap size = 500
+pid = 2Thread 0 finished reading file : files/5.txt
+pid = 2, tid = 0 , file = 2.txt
+Thread = 0 is reading file files/2.txt
+Pid = 2, tid : 0: wordcoutn size = 3167
+Tiem for reading files/2.txt = 0.01
+Starting mapping for files/2.txt
+Tiem for communicating the contents of the file files/2.txt to reducers = 0.1
+pid = 2,tid : 0: Hashmap size = 488
+pid = 2Thread 0 finished reading file : files/2.txt
+pid = 2, tid = 0 , file = 12.txt
+Thread = 0 is reading file files/12.txt
+Pid = 2, tid : 0: wordcoutn size = 6862
+Tiem for reading files/12.txt = 0.03
+Starting mapping for files/12.txt
+Tiem for communicating the contents of the file files/12.txt to reducers = 0.59
+pid = 2,tid : 0: Hashmap size = 500
+pid = 2Thread 0 finished reading file : files/12.txt
+pid = 2, tid = 0 , file = 15.txt
+Thread = 0 is reading file files/15.txt
+Pid = 2, tid : 0: wordcoutn size = 10065
+Tiem for reading files/15.txt = 0.06
+Starting mapping for files/15.txt
+Tiem for communicating the contents of the file files/11.txt to reducers = 1.18
+pid = 3,tid : 0: Hashmap size = 500
+pid = 3Thread 0 finished reading file : files/11.txt
+pid = 3, tid = 0 , file = 8.txt
+Thread = 0 is reading file files/8.txt
+Pid = 3, tid : 0: wordcoutn size = 3009
+Tiem for reading files/8.txt = 0.01
+Starting mapping for files/8.txt
+Tiem for communicating the contents of the file files/8.txt to reducers = 0.11
+pid = 3,tid : 0: Hashmap size = 485
+pid = 3Thread 0 finished reading file : files/8.txt
+pid = 3, tid = 0 , file = 1.txt
+Thread = 0 is reading file files/1.txt
+Pid = 3, tid : 0: wordcoutn size = 5409
+Tiem for reading files/1.txt = 0.02
+Starting mapping for files/1.txt
+Tiem for communicating the contents of the file files/1.txt to reducers = 0.4
+pid = 3,tid : 0: Hashmap size = 500
+pid = 3Thread 0 finished reading file : files/1.txt
+pid = 3, tid = 0 , file = 6.txt
+Thread = 0 is reading file files/6.txt
+Pid = 3, tid : 0: wordcoutn size = 12493
+Tiem for reading files/6.txt = 0.11
+Starting mapping for files/6.txt
+Tiem for communicating the contents of the file files/15.txt to reducers = 1.38
+pid = 2,tid : 0: Hashmap size = 500
+pid = 2Thread 0 finished reading file : files/15.txt
+pid = 2, tid = 0 , file = 3.txt
+Thread = 0 is reading file files/3.txt
+Pid = 2, tid : 0: wordcoutn size = 14704
+Tiem for reading files/3.txt = 0.17
+Starting mapping for files/3.txt
+Tiem for communicating the contents of the file files/6.txt to reducers = 2.23
+pid = 3,tid : 0: Hashmap size = 500
+pid = 3Thread 0 finished reading file : files/6.txt
+PID : 3, setting the 1 in global array
+Tiem for communicating the contents of the file files/3.txt to reducers = 3.08
+pid = 2,tid : 0: Hashmap size = 500
+pid = 2Thread 0 finished reading file : files/3.txt
+pid = 2, tid = 0 , file = 4.txt
+Thread = 0 is reading file files/4.txt
+Pid = 2, tid : 0: wordcoutn size = 10644
+Tiem for reading files/4.txt = 0.09
+Starting mapping for files/4.txt
+Tiem for communicating the contents of the file files/4.txt to reducers = 1.69
+pid = 2,tid : 0: Hashmap size = 500
+pid = 2Thread 0 finished reading file : files/4.txt
+pid = 2, tid = 0 , file = 14.txt
+Thread = 0 is reading file files/14.txt
+Pid = 2, tid : 0: wordcoutn size = 9564
+Tiem for reading files/14.txt = 0.04
+Starting mapping for files/14.txt
+Tiem for communicating the contents of the file files/14.txt to reducers = 1.39
+pid = 2,tid : 0: Hashmap size = 500
+pid = 2Thread 0 finished reading file : files/14.txt
+PID : 2, setting the 0 in global array
+filename : status_0, data : true
+Res true
+filename : status_0, data : true
+Res true
+filename : status_1, data : true
+Res true
+return value = 0
+Pid : 2 sending stop to reducer
+pid = 2, stoping reducer thread 0
+PId = 2, at barrier
+recvd stop signal to reducer0
+filename : status_1, data : true
+Res true
+return value = 0
+Pid : 3 sending stop to reducer
+pid = 3, stoping reducer thread 1
+PId = 3, at barrier
+recvd stop signal to reducer1
+Reducer Thread 0 is returning from reduceFunction
+Pid : 0, Reducer thread returned
+PId = 0, at barrier
+Pid = 0,Time elapsed = 10.0428
+Reducer Thread 1 is returning from reduceFunction
+Pid : 1, Reducer thread returned
+PId = 1, at barrier
+srun: error: scholar-a002: tasks 0-1: Segmentation fault
